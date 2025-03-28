@@ -57,8 +57,32 @@
     color: #000000 !important;
 }
 
+.nav-link {
+    position: relative;
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
 .nav-link:hover {
-    border-bottom: solid 1px rgb(18, 96, 197);
+    color: #007bff; /* Cambia el color del texto al pasar el mouse */
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #007bff; /* Color del subrayado */
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 100%; /* Expande el subrayado al ancho completo */
 }
 
 .navbar-toggler {
@@ -123,7 +147,7 @@
 }
 
 .background-gradient-invert {
-    background-image: linear-gradient(135deg, #5cc8f2, #FFFFFF, #5cc8f2, #FFFFFF);
+    background-image: linear-gradient(135deg, #178bb9, #c9c9ca, #1997c9, #c4c4c4);
 }
 
 .background-gray {
@@ -156,21 +180,20 @@ hr {
 }
 
 .btn-grad {
-    background-image: linear-gradient(to right, rgb(18, 96, 197) 0%, rgb(27, 186, 201) 51%, #FFFFFF 100%);
+    background-image: linear-gradient(to right, #b77900, #008b80);
     padding: 10px 25px;
     text-align: center;
     transition: 0.5s;
     background-size: 200% auto;
-    color:#FFFFFF;
+    color: #FFFFFF;
     border-radius: 10px;
-    border: ridge 1px transparent;
+    /*border: ridge 1px transparent;*/
 }
 
 .btn-grad:hover {
     background-position: right center; /* change the direction of the change here */
     color: #FFFFFF;
     text-decoration: none;
-    border: ridge 1px transparent;
 }
 
 /****************/
@@ -291,9 +314,10 @@ hr {
         width: 33.3333%;
     }
     .title-font {
-        font-size: 3.5rem;
-        background: -webkit-linear-gradient(left, #000000, #000000);
-        background: linear-gradient(to right, #000000, #000000); /* versión estándar */
+        margin-top: 100px;
+        font-size: 3rem;
+        background: -webkit-linear-gradient(left, #363636, #07777a);
+        background: linear-gradient(to left, #363636, #07777a); /* versión estándar */
         -webkit-background-clip: text; /* versión con prefijo */
         background-clip: text; /* versión estándar */
         -webkit-text-fill-color: transparent;
@@ -313,8 +337,8 @@ hr {
     }
     .title-font {
         font-size: 3rem;
-        background: -webkit-linear-gradient(left, #000000, #000000);
-        background: linear-gradient(to right, #000000, #000000); /* versión estándar */
+        background: -webkit-linear-gradient(left, #363636, #07777a);
+        background: linear-gradient(to right, #363636, #07777a); /* versión estándar */
         -webkit-background-clip: text; /* versión con prefijo */
         background-clip: text; /* versión estándar */
         -webkit-text-fill-color: transparent;
@@ -348,9 +372,9 @@ hr {
         height: auto;
     }
     .title-font {
-        font-size: 3rem;
-        background: -webkit-linear-gradient(left, #000000, #000000);
-        background: linear-gradient(to right, #000000, #000000); /* versión estándar */
+        font-size: 2rem;
+        background: -webkit-linear-gradient(left, #363636, #07777a);
+        background: linear-gradient(to right, #363636, #07777a); /* versión estándar */
         -webkit-background-clip: text; /* versión con prefijo */
         background-clip: text; /* versión estándar */
         -webkit-text-fill-color: transparent;
@@ -400,7 +424,7 @@ section {
     top: 0;
     left: 0;
     height: 5px; /* Altura de la barra */
-    background-color: #5cc8f2; /* Color de la barra */
+    background-color: #1c5a5c; /* Color de la barra */
     width: 0%; /* Ancho inicial */
     z-index: 1000; /* Aparece encima de todo */
 }
