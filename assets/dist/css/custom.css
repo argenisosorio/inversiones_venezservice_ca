@@ -58,7 +58,7 @@
 }
 
 .nav-link:hover {
-    border-bottom: solid 1px blue;
+    border-bottom: solid 1px rgb(18, 96, 197);
 }
 
 .navbar-toggler {
@@ -123,7 +123,7 @@
 }
 
 .background-gradient-invert {
-    background-image: linear-gradient(135deg, #b3e6f5, #b3e6f5, #b3e6f5, #FFFFFF);
+    background-image: linear-gradient(135deg, #5cc8f2, #FFFFFF, #5cc8f2, #FFFFFF);
 }
 
 .background-gray {
@@ -152,11 +152,11 @@
 }
 
 hr {
-    color: #0732a2;
+    color: gray;
 }
 
 .btn-grad {
-    background-image: linear-gradient(to right, #1f1f1f 0%, gray  51%, #1f1f1f  100%);
+    background-image: linear-gradient(to right, rgb(18, 96, 197) 0%, rgb(27, 186, 201) 51%, #FFFFFF 100%);
     padding: 10px 25px;
     text-align: center;
     transition: 0.5s;
@@ -400,7 +400,7 @@ section {
     top: 0;
     left: 0;
     height: 5px; /* Altura de la barra */
-    background-color: purple; /* Color de la barra */
+    background-color: #5cc8f2; /* Color de la barra */
     width: 0%; /* Ancho inicial */
     z-index: 1000; /* Aparece encima de todo */
 }
